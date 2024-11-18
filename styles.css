@@ -1,0 +1,49 @@
+:root {
+  /* primary */
+  --primary-white: #ffffff;
+  --primary-blue: #2b7fff;
+  --primary-dark-blue: #011c44;
+  /* secondary */
+  --secondary-brown: #4a4a4a;
+  --secondary-brown-light: #747272;
+  --secondary-blue: #011f4a;
+  --secondary-yellow: #ffd02b;
+}
+
+/*  */
+
+body {
+  color: var(--primary-dark-blue);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* about-us  */
+
+.hero-title {
+  color: var(--primary-blue);
+}
+
+.button {
+  color: var(--primary-white);
+  background-color: var(--primary-blue);
+}
+
+.section-title {
+  color: var(--primary-dark-blue);
+}
+
+.section-title .brand-accent {
+  color: var(--primary-blue);
+}
+
+.link {
+  color: var(--primary-dark-blue);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--primary-blue);
+}
