@@ -1,3 +1,31 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-weight: 400;
+  src: url('../fonts/play-v19-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-weight: 700;
+  src: url('../fonts/play-v19-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url('../fonts/roboto-v32-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url('../fonts/roboto-v32-latin-700.woff2') format('woff2');
+}
+
 :root {
   /* primary */
   --primary-white: #ffffff;
@@ -14,36 +42,141 @@
 
 body {
   color: var(--primary-dark-blue);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 ul {
   list-style-type: none;
 }
 
-/* about-us  */
-
-.hero-title {
-  color: var(--primary-blue);
-}
+/* global classes */
 
 .button {
   color: var(--primary-white);
   background-color: var(--primary-blue);
+  border-radius: 32px;
+  border: 2px solid transparent;
+}
+
+.button:hover {
+  color: var(--primary-dark-blue);
+  background-color: transparent;
+  border: 2px solid var(--primary-blue);
 }
 
 .section-title {
   color: var(--primary-dark-blue);
+  font-family: 'Play', sans-serif;
+  font-size: 64px;
+  line-height: 1.15;
 }
 
-.section-title .brand-accent {
+.brand-accent {
   color: var(--primary-blue);
 }
 
 .link {
   color: var(--primary-dark-blue);
   text-decoration: none;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 .link:hover {
   color: var(--primary-blue);
+  font-weight: 700;
+}
+
+/* home  */
+
+.preheader {
+  font-size: 18px;
+}
+
+.hero-title {
+  color: var(--primary-blue);
+  font-size: 140px;
+  font-weight: 700;
+}
+
+.sub-title {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* about us */
+
+#about-us .text {
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+/* why us */
+
+#why-us .text {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* products */
+
+#products .text {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+/* location */
+
+.map {
+  border-radius: 32px;
+  border: 0;
+}
+
+.form {
+  border-radius: 32px;
+  background-color: var(--primary-dark-blue);
+}
+
+.form-header {
+  color: var(--primary-white);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.input {
+  color: var(--primary-white);
+  background-color: transparent;
+  border: 2px solid var(--secondary-brown-light);
+  border-radius: 32px;
+}
+
+.input:focus {
+  outline: 0;
+  background-color: var(--secondary-brown-light);
+}
+
+.form-outro-text {
+  color: var(--primary-white);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--primary-dark-blue);
+}
+
+address {
+  font-style: normal;
+}
+
+.footer-link {
+  color: var(--primary-white);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.copyright {
+  color: var(--secondary-brown-light);
 }
