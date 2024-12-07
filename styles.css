@@ -51,7 +51,9 @@ body {
   margin: 0;
 }
 
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -63,6 +65,10 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+
+a {
+  display: inline-block;
 }
 
 ul {
@@ -147,17 +153,30 @@ ul {
   gap: 32px;
 }
 
+.nav-social-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--primary-dark-blue);
+}
+
 /* home  */
 
 .home-section {
-  background-image: url('../images/bg-banner-top-home.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
 }
 
 .container-home {
   margin-left: 106px;
+  background-image: linear-gradient(
+      89.38deg,
+      #ffffff 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url('../images/bg-banner-top-home.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
 
 .hero-intro {
@@ -194,10 +213,12 @@ ul {
   display: flex;
   justify-content: space-between;
   gap: 32px;
+  flex-wrap: wrap;
 }
 
 .about-us-content {
   margin-top: 40px;
+  flex-basis: calc(calc(100% - 32px) - 40%);
 }
 
 .section-title-about-us {
@@ -208,16 +229,20 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  flex-basis: 1;
-  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(calc(100% - 32px) - 60%);
+}
+
+.about-us-images > img {
+  width: 320px;
+  height: 320px;
 }
 
 .about-us-images > img:nth-child(1) {
-  padding-right: 172px;
 }
 
 .about-us-images > img:nth-child(2) {
-  padding-left: 172px;
+  align-self: flex-end;
 }
 
 /* why us */
@@ -234,13 +259,29 @@ ul {
 .benefits {
   display: flex;
   gap: 56px;
+  flex-wrap: wrap;
 }
 
 .benefits-item {
+  flex-basis: calc(calc(100% - 112px) / 3);
+  padding: 24px 32px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   border-radius: 15px;
   box-shadow: 0px 4px 4px 0px #a8c6f561;
+}
+
+.benefits-item .text {
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  fill: var(--primary-blue);
 }
 
 /* products */
@@ -250,6 +291,12 @@ ul {
   line-height: 1.2;
   color: var(--primary-white);
   position: absolute;
+}
+
+.products-carousel {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .products-list {
@@ -264,9 +311,66 @@ ul {
 
 .product {
   position: relative;
+  border-radius: 4px 120px 4px 120px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: stretch;
 }
 
-/* location */
+.product::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180.05deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.725825) 84.61%,
+    #011c44 101.39%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 120px 4px 120px;
+}
+
+.product-text {
+  z-index: 1;
+  margin: 0 77px 32px 115px;
+}
+
+.carousel-button {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  border: 1px solid var(--primary-dark-blue);
+  cursor: pointer;
+  background-color: transparent;
+  fill: var(--primary-dark-blue);
+}
+
+.carousel-button:hover {
+  border: 1px solid var(--primary-white);
+  background-color: var(--primary-blue);
+  fill: var(--primary-white);
+}
+/* contact */
+
+.contact-section {
+  padding-bottom: 96px;
+}
 
 .contact-wrapper {
   display: flex;
@@ -342,11 +446,18 @@ ul {
 .footer {
   padding: 56px 0;
   background-color: var(--primary-dark-blue);
+  background-image: url('./images/footer-background.png');
+  background-size: cover;
 }
 
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 32px;
+}
+
+.footer-wrapper > * {
+  flex-basis: calc(25% - 2px);
 }
 
 .footer-list {
@@ -357,6 +468,18 @@ ul {
 
 .address {
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-social {
+  fill: var(--primary-white);
 }
 
 .footer-link {

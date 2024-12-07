@@ -11,7 +11,7 @@
       <div class="container">
         <nav class="nav">
           <a href="#home">
-            <img src="./images/svg/logo.svg" alt="Logo" />
+            <img src="./images/logo.svg" alt="Logo" />
           </a>
           <ul class="nav-menu">
             <li><a class="link" href="#about-us">Про нас</a></li>
@@ -21,22 +21,29 @@
           </ul>
           <ul class="nav-socials">
             <li>
-              <a href="">
-                <img
-                  src="./images/svg/telephone-receiver_icon.svg"
-                  alt="Phone"
-                />
+              <a href="tel:+3801234567890">
+                <svg class="nav-social-icon">
+                  <use
+                    href="./images/spritesheet.svg#icon-telephone-receiver_icon"
+                  ></use>
+                </svg>
               </a>
             </li>
             <li>
-              <a href=""
-                ><img src="./images/svg/facebook.svg" alt="Facebook"
-              /></a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <svg class="nav-social-icon">
+                  <use href="./images/spritesheet.svg#icon-facebook-logo"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a href=""
-                ><img src="./images/svg/instagram.svg" alt="Insta"
-              /></a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <svg class="nav-social-icon">
+                  <use
+                    href="./images/spritesheet.svg#icon-instagram-logo"
+                  ></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </nav>
@@ -94,27 +101,31 @@
           </h2>
           <ul class="benefits">
             <li class="benefits-item">
-              <img
-                src="./images/svg/game-icons_materials-science.svg"
-                alt="science"
-              />
+              <svg class="benefit-icon">
+                <use
+                  href="./images/spritesheet.svg#icon-materials-science"
+                ></use>
+              </svg>
               <p class="text">
                 Всі наші косметологи мають вищу медичну освіту та стаж роботи
                 від 5 років
               </p>
             </li>
             <li class="benefits-item">
-              <img
-                src="./images/svg/medicinecosmeticsbottletreatment.svg"
-                alt="cosmetics"
-              />
+              <svg class="benefit-icon">
+                <use
+                  href="./images/spritesheet.svg#icon-medicinecosmeticsbottletreatment"
+                ></use>
+              </svg>
               <p class="text">
                 Використовуємо тільки професійне обладнання та косметику,
                 перевірену часом
               </p>
             </li>
             <li class="benefits-item">
-              <img src="./images/svg/ph_crown-light.svg" alt="crown" />
+              <svg class="benefit-icon">
+                <use href="./images/spritesheet.svg#icon-ph_crown-light"></use>
+              </svg>
               <p class="text">
                 Наша мета - підкреслити переваги та приховати недоліки, а не
                 переробити
@@ -128,29 +139,53 @@
           <h2 class="section-title">
             Наші <span class="brand-accent">процедури</span>
           </h2>
-          <ul class="products-list">
-            <li class="product-wrapper">
-              <article class="product">
-                <h3 class="text">Маски для обличчя</h3>
-                <img src="./images/cream.jpg" alt="cream on woman's face" />
-              </article>
-            </li>
-            <li class="product-wrapper">
-              <article class="product">
-                <h3 class="text">Ін'єкції для обличчя</h3>
-                <img src="./images/shot.jpg" alt="shot into woman's face" />
-              </article>
-            </li>
-            <li class="product-wrapper">
-              <article class="product">
-                <h3 class="text">Очищення обличчя</h3>
-                <img src="./images/massage.jpg" alt="massage on woman's face" />
-              </article>
-            </li>
-          </ul>
+          <div class="products-carousel">
+            <button class="carousel-button" type="button">
+              <svg width="16" height="16">
+                <use href="./images/spritesheet.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <ul class="products-list">
+              <li class="product-wrapper">
+                <article class="product">
+                  <p class="text product-text">Маски для обличчя</p>
+                  <img
+                    class="product-image"
+                    src="./images/cream.jpg"
+                    alt="cream on woman's face"
+                  />
+                </article>
+              </li>
+              <li class="product-wrapper">
+                <article class="product">
+                  <p class="text product-text">Ін'єкції для обличчя</p>
+                  <img
+                    class="product-image"
+                    src="./images/shot.jpg"
+                    alt="shot into woman's face"
+                  />
+                </article>
+              </li>
+              <li class="product-wrapper">
+                <article class="product">
+                  <p class="text product-text">Очищення обличчя</p>
+                  <img
+                    class="product-image"
+                    src="./images/massage.jpg"
+                    alt="massage on woman's face"
+                  />
+                </article>
+              </li>
+            </ul>
+            <button class="carousel-button" type="button">
+              <svg width="16" height="16">
+                <use href="./images/spritesheet.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
-      <section id="contact" class="section">
+      <section id="contact" class="section contact-section">
         <div class="container container-compact">
           <h2 class="section-title">
             Як нас <span class="brand-accent">знайти</span>
@@ -204,9 +239,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="#home">
-            <img src="./images/svg/logo.svg" alt="Logo" />
-          </a>
+          <div>
+            <a href="#home">
+              <img src="./images/logo.svg" alt="Logo" />
+            </a>
+          </div>
+
           <ul class="footer-list">
             <li><a class="footer-link" href="#about-us">Про нас</a></li>
             <li><a class="footer-link" href="#why-us">Чому ми</a></li>
@@ -216,12 +254,12 @@
           <address class="address">
             <ul class="footer-list">
               <li>
-                <a class="footer-link" href="tel:+380960000007"
+                <a class="footer-link" href="tel:+3801234567890"
                   >+ 38 (123) 456 78 90</a
                 >
               </li>
               <li>
-                <a class="footer-link" href="mailto:beautyzone@gmail.com"
+                <a class="footer-link" href="mailto:example@example.com"
                   >example@example.com</a
                 >
               </li>
@@ -234,23 +272,32 @@
                 </a>
               </li>
             </ul>
-            <ul>
+            <ul class="footer-social-list">
               <li>
-                <a href="">
-                  <img
-                    src="./images/svg/telephone-receiver_icon.svg"
-                    alt="Phone"
-                  />
+                <a href="tel:+3801234567890">
+                  <svg class="footer-social" width="42" height="42">
+                    <use
+                      href="./images/spritesheet.svg#icon-telephone-receiver_icon"
+                    ></use>
+                  </svg>
                 </a>
               </li>
               <li>
-                <a href="">
-                  <img src="./images/svg/facebook.svg" alt="Facebook" />
+                <a href="https://www.facebook.com/" target="_blank">
+                  <svg class="footer-social" width="42" height="42">
+                    <use
+                      href="./images/spritesheet.svg#icon-facebook-logo"
+                    ></use>
+                  </svg>
                 </a>
               </li>
               <li>
-                <a href="">
-                  <img src="./images/svg/instagram.svg" alt="Insta" />
+                <a href="https://www.instagram.com/" target="_blank">
+                  <svg class="footer-social" width="42" height="42">
+                    <use
+                      href="./images/spritesheet.svg#icon-instagram-logo"
+                    ></use>
+                  </svg>
                 </a>
               </li>
             </ul>
