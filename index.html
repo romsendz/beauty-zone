@@ -59,7 +59,7 @@
               Zone
             </h1>
             <div class="hero-button-container">
-              <button class="button">Замовити дзвінок</button>
+              <button class="button modal-btn-open">Замовити дзвінок</button>
               <p class="hero-button-text">
                 Запишись та отримай безкоштовну консультацію нашого косметолога
               </p>
@@ -313,12 +313,12 @@
         </div>
       </div>
     </footer>
-    <script>
-      // Get the current year
-      const currentYear = new Date().getFullYear();
-
-      // Set the year dynamically in the element with id 'current-year'
-      document.getElementById('current-year').textContent = currentYear;
-    </script>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/currentYear.js"></script>
   </body>
 </html>

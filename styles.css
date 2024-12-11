@@ -391,6 +391,8 @@ ul {
   padding: 48px 56px;
   border-radius: 32px;
   background-color: var(--primary-dark-blue);
+  background-image: url('./images/footer-background.png');
+  background-size: cover;
 }
 
 .form-header {
@@ -444,10 +446,22 @@ ul {
 /* footer */
 
 .footer {
+  position: relative;
   padding: 56px 0;
   background-color: var(--primary-dark-blue);
   background-image: url('./images/footer-background.png');
   background-size: cover;
+}
+
+.footer::after {
+  position: absolute;
+  content: '';
+  width: 246px;
+  height: 152px;
+  bottom: 0;
+  right: 0;
+  background-image: url('./images/medliquid.png');
+  background-repeat: no-repeat;
 }
 
 .footer-wrapper {
@@ -491,4 +505,42 @@ ul {
 
 .copyright {
   color: var(--secondary-brown-light);
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #747272e0;
+  z-index: 2;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 880px;
+  height: 880px;
+  border-radius: 32px;
+  background-color: var(--primary-dark-blue);
+  background-image: url('./images/footer-background.png');
+  background-size: cover;
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 42px;
+  top: 42px;
 }
