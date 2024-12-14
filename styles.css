@@ -49,12 +49,27 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin: 0;
+  background-image: url('./images/background-blue.png');
+  background-position: center 1400px;
+  background-repeat: no-repeat;
 }
 
 *,
 ::after,
 ::before {
   box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 h1,
@@ -86,6 +101,10 @@ ul {
   border: 2px solid transparent;
   padding: 16px 32px;
   cursor: pointer;
+  transition: background-color 0.1s linear;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .button:hover {
@@ -112,6 +131,7 @@ ul {
   text-decoration: none;
   font-size: 18px;
   line-height: 1.2;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -133,6 +153,16 @@ ul {
   padding: 48px 0;
 }
 /* nav  */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
+  backdrop-filter: blur(10px);
+  background: #ffffff40;
+}
 
 .nav {
   display: flex;
@@ -161,11 +191,8 @@ ul {
 
 /* home  */
 
-.home-section {
-}
-
-.container-home {
-  margin-left: 106px;
+.home-wrapper {
+  padding: 190px 0 0 0;
   background-image: linear-gradient(
       89.38deg,
       #ffffff 30.62%,
@@ -176,7 +203,10 @@ ul {
     url('../images/bg-banner-top-home.jpg');
   background-repeat: no-repeat;
   background-position: right;
-  background-size: contain;
+  background-size: cover;
+}
+.container-home {
+  margin-left: 106px;
 }
 
 .hero-intro {
@@ -214,6 +244,7 @@ ul {
   justify-content: space-between;
   gap: 32px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .about-us-content {
@@ -238,16 +269,44 @@ ul {
   height: 320px;
 }
 
-.about-us-images > img:nth-child(1) {
-}
-
 .about-us-images > img:nth-child(2) {
   align-self: flex-end;
+}
+
+.star-icon {
+  position: absolute;
+}
+
+.star-icon.large {
+  right: 300px;
+  bottom: 270px;
+  width: 64px;
+  height: 64px;
+  fill: var(--secondary-blue);
+  transform: rotate(30deg);
+}
+
+.star-icon.mid {
+  right: -26px;
+  top: 32px;
+  width: 40px;
+  height: 40px;
+  fill: var(--primary-blue);
+}
+
+.star-icon.small {
+  right: 6px;
+  top: 270px;
+  width: 16px;
+  height: 16px;
+  fill: var(--secondary-brown-light);
+  transform: rotate(30deg);
 }
 
 /* why us */
 
 .why-us-section {
+  position: relative;
   padding-top: 176px;
 }
 
@@ -272,6 +331,11 @@ ul {
   gap: 8px;
   border-radius: 15px;
   box-shadow: 0px 4px 4px 0px #a8c6f561;
+  transition: transform 0.2s;
+}
+
+.benefits-item:hover {
+  transform: scale(1.05);
 }
 
 .benefits-item .text {
@@ -384,65 +448,6 @@ ul {
   max-width: 600px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 48px 56px;
-  border-radius: 32px;
-  background-color: var(--primary-dark-blue);
-  background-image: url('./images/footer-background.png');
-  background-size: cover;
-}
-
-.form-header {
-  color: var(--primary-white);
-  font-size: 22px;
-  line-height: 1.2;
-}
-
-.form-blocks {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.input {
-  width: 100%;
-  padding: 18px 32px;
-  color: var(--primary-white);
-  background-color: transparent;
-  border: 2px solid var(--secondary-brown-light);
-  border-radius: 32px;
-}
-
-.input:focus {
-  outline: 0;
-  background-color: var(--secondary-brown-light);
-}
-
-.form-button-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  gap: 8px;
-}
-
-.form-button {
-  margin: 0 16px;
-}
-
-.sub-title {
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.form-outro-text {
-  color: var(--primary-white);
-  text-align: center;
-}
-
 /* footer */
 
 .footer {
@@ -521,6 +526,8 @@ ul {
   align-items: center;
   background-color: #747272e0;
   z-index: 2;
+  padding: 20px 20px;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .backdrop.is-hidden {
@@ -531,16 +538,113 @@ ul {
 
 .modal {
   position: relative;
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  height: 100%;
+  max-width: 880px;
+  max-height: 880px;
   border-radius: 32px;
+  padding: 42px 144px;
   background-color: var(--primary-dark-blue);
   background-image: url('./images/footer-background.png');
   background-size: cover;
+  overflow-y: auto;
 }
 
 .modal-btn-close {
   position: absolute;
   right: 42px;
   top: 42px;
+  background-color: transparent;
+  padding: 8px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-icon-close {
+  fill: var(--primary-white);
+}
+
+/* Form */
+
+.modal-form-title {
+  color: var(--primary-white);
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.form-sub-title {
+  color: var(--primary-white);
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 18px 32px 18px;
+}
+
+.form-field {
+  margin-bottom: 24px;
+}
+
+/* From - contact section */
+
+.contact-form-container {
+  padding: 48px 56px;
+  border-radius: 32px;
+  background-color: var(--primary-dark-blue);
+  background-image: url('./images/footer-background.png');
+  background-size: cover;
+}
+
+.form-input {
+  width: 100%;
+  padding: 18px 32px;
+  color: var(--primary-white);
+  background-color: transparent;
+  border: 2px solid var(--secondary-brown-light);
+  border-radius: 32px;
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.form-input:focus {
+  outline: 0;
+  background-color: var(--secondary-brown-light);
+}
+
+.form-input::placeholder {
+  color: var(--primary-white);
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.form-button {
+  width: calc(100% - 32px);
+  display: block;
+  margin: 0 16px;
+  margin-bottom: 8px;
+}
+
+.form-button:hover {
+  background-color: var(--primary-white);
+}
+
+.form-text {
+  color: var(--primary-white);
+  text-align: center;
+}
+
+.form-privacy-policy-text {
+  text-align: center;
+  color: var(--secondary-brown-light);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.form-privacy-policy-link {
+  color: var(--secondary-brown-light);
 }

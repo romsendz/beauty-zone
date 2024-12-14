@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <nav class="nav">
           <a href="#home">
@@ -50,8 +50,8 @@
       </div>
     </header>
     <main>
-      <section id="home" class="home-section">
-        <div class="container">
+      <section id="home">
+        <div class="container home-wrapper">
           <div class="container-home">
             <p class="hero-intro">Косметологічна клініка</p>
             <h1 class="hero-title" lang="en">
@@ -90,9 +90,19 @@
               <img src="./images/face-before.jpg" alt="face before" />
               <img src="./images/face-after.jpg" alt="face after" />
             </div>
+            <svg class="star-icon large">
+              <use href="./images/spritesheet.svg#icon-star"></use>
+            </svg>
+            <svg class="star-icon mid">
+              <use href="./images/spritesheet.svg#icon-star"></use>
+            </svg>
+            <svg class="star-icon small">
+              <use href="./images/spritesheet.svg#icon-star"></use>
+            </svg>
           </div>
         </div>
       </section>
+      <div class="background-wrapper"></div>
       <section id="why-us" class="section why-us-section">
         <div class="container container-compact">
           <h2 class="section-title">
@@ -148,7 +158,7 @@
             <ul class="products-list">
               <li class="product-wrapper">
                 <article class="product">
-                  <p class="text product-text">Маски для обличчя</p>
+                  <h3 class="text product-text">Маски для обличчя</h3>
                   <img
                     class="product-image"
                     src="./images/cream.jpg"
@@ -158,7 +168,7 @@
               </li>
               <li class="product-wrapper">
                 <article class="product">
-                  <p class="text product-text">Ін'єкції для обличчя</p>
+                  <h3 class="text product-text">Ін'єкції для обличчя</h3>
                   <img
                     class="product-image"
                     src="./images/shot.jpg"
@@ -168,7 +178,7 @@
               </li>
               <li class="product-wrapper">
                 <article class="product">
-                  <p class="text product-text">Очищення обличчя</p>
+                  <h3 class="text product-text">Очищення обличчя</h3>
                   <img
                     class="product-image"
                     src="./images/massage.jpg"
@@ -200,38 +210,60 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <form action="post" class="form">
-              <h3 class="form-header">
-                Запишіться <span class="brand-accent">безкоштовно</span><br />
-                та отримайте подарунок
+            <div class="contact-form-container">
+              <h3 class="form-sub-title">
+                Запишіться <span class="brand-accent">безкоштовно</span><br />та
+                отримайте подарунок
               </h3>
-              <div class="form-blocks">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Ваше ім'я та прізвище"
-                />
-                <input
-                  class="input"
-                  type="tel"
-                  placeholder="Ваш номер телефону"
-                />
-                <input
-                  class="input"
-                  type="email"
-                  placeholder="Ваша електронна пошта"
-                />
-                <div class="form-button-wrapper">
-                  <button type="submit" class="button form-button">
-                    Записатись безкоштовно
-                  </button>
-                  <p class="sub-title form-outro-text">
-                    Натискаючи на кнопку я погоджуюсь
-                    <a href="">з політикою конфіденційності</a>
-                  </p>
+              <form name="contact-form">
+                <div class="form-field">
+                  <label class="sr-only" for="user-name"
+                    >Ваше ім'я та прізвище</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    placeholder="Ваше ім'я та прізвище"
+                  />
                 </div>
-              </div>
-            </form>
+                <div class="form-field">
+                  <label class="sr-only" for="user-tel"
+                    >Ваш номер телефону</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="user-tel"
+                    id="user-tel"
+                    placeholder="Ваш номер телефону"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="sr-only" for="user-email"
+                    >Ваша електронна пошта</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    placeholder="Ваша електронна пошта"
+                  />
+                </div>
+
+                <button class="button form-button" type="submit">
+                  Записатись безкоштовно
+                </button>
+              </form>
+              <p class="form-privacy-policy-text">
+                Натискаючи на кнопку я погоджуюсь
+                <a class="form-privacy-policy-link" href=""
+                  >з політикою конфіденційності</a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -315,7 +347,60 @@
     </footer>
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">Close</button>
+        <button class="modal-btn-close" type="button">
+          <svg class="modal-icon-close" width="16" height="16">
+            <use href="./images/spritesheet.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="section-title modal-form-title">Замовити дзвінок</h2>
+        <h3 class="form-sub-title">
+          Запишіться <span class="brand-accent">безкоштовно</span><br />та
+          отримайте подарунок
+        </h3>
+        <form name="modal-form">
+          <div class="form-field">
+            <label class="sr-only" for="user-name">Ваше ім'я та прізвище</label>
+            <input
+              class="form-input"
+              type="text"
+              name="call-order-user-name"
+              id="call-order-user-name"
+              placeholder="Ваше ім'я та прізвище"
+            />
+          </div>
+          <div class="form-field">
+            <label class="sr-only" for="user-tel">Ваш номер телефону</label>
+            <input
+              class="form-input"
+              type="tel"
+              name="call-order-user-tel"
+              id="call-order-user-tel"
+              placeholder="Ваш номер телефону"
+            />
+          </div>
+          <div class="form-field">
+            <label class="sr-only" for="user-email"
+              >Ваша електронна пошта</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="call-order-user-email"
+              id="call-order-user-email"
+              placeholder="Ваша електронна пошта"
+            />
+          </div>
+
+          <button class="button form-button" type="submit">
+            Записатись безкоштовно
+          </button>
+        </form>
+        <p class="form-privacy-policy-text">
+          Натискаючи на кнопку я погоджуюсь
+          <a class="form-privacy-policy-link" href=""
+            >з політикою конфіденційності</a
+          >
+        </p>
       </div>
     </div>
     <script src="./js/modal.js"></script>
