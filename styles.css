@@ -9,21 +9,21 @@
   font-display: swap;
   font-family: 'Play';
   font-weight: 700;
-  src: url('../fonts/play-v19-latin-700.woff2') format('woff2');
+  src: url('./fonts/play-v19-latin-700.woff2') format('woff2');
 }
 
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
   font-weight: 400;
-  src: url('../fonts/roboto-v32-latin-regular.woff2') format('woff2');
+  src: url('./fonts/roboto-v32-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
   font-weight: 700;
-  src: url('../fonts/roboto-v32-latin-700.woff2') format('woff2');
+  src: url('./fonts/roboto-v32-latin-700.woff2') format('woff2');
 }
 
 :root {
@@ -200,7 +200,7 @@ ul {
       rgba(255, 255, 255, 0.193204) 58.65%,
       rgba(255, 255, 255, 0) 72.78%
     ),
-    url('../images/bg-banner-top-home.jpg');
+    url('./images/bg-banner-top-home.jpg');
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
