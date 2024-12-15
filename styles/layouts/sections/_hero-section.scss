@@ -1,0 +1,36 @@
+.home-wrapper {
+  padding: 190px 0 0 0;
+  background-image: linear-gradient(
+      89.38deg,
+      #ffffff 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url('../images/bg-banner-top-home.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+.container-home {
+  margin-left: 106px;
+}
+
+.hero-intro {
+  margin: 0;
+}
+
+.hero-title {
+  color: var(--primary-blue);
+  font-size: 140px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.hero-button-container {
+  max-width: 35%;
+}
+
+.hero-button-text {
+  margin-top: 14px;
+}

@@ -1,0 +1,61 @@
+.footer {
+  position: relative;
+  padding: 56px 0;
+  background-color: var(--primary-dark-blue);
+  background-image: url('../images/footer-background.png');
+  background-size: cover;
+}
+
+.footer::after {
+  position: absolute;
+  content: '';
+  width: 246px;
+  height: 152px;
+  bottom: 0;
+  right: 0;
+  background-image: url('../images/medliquid.png');
+  background-repeat: no-repeat;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.footer-wrapper > * {
+  flex-basis: calc(25% - 2px);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-social {
+  fill: var(--primary-white);
+}
+
+.footer-link {
+  color: var(--primary-white);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.copyright {
+  color: var(--secondary-brown-light);
+}

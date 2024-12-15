@@ -1,0 +1,72 @@
+.about-us-section .text {
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.about-us-section .text:first-of-type {
+  margin-bottom: 40px;
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.about-us-content {
+  margin-top: 40px;
+  flex-basis: calc(calc(100% - 32px) - 40%);
+}
+
+.section-title-about-us {
+  text-align: start;
+}
+
+.about-us-images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-shrink: 0;
+  flex-basis: calc(calc(100% - 32px) - 60%);
+}
+
+.about-us-images > img {
+  width: 320px;
+  height: 320px;
+}
+
+.about-us-images > img:nth-child(2) {
+  align-self: flex-end;
+}
+
+.star-icon {
+  position: absolute;
+}
+
+.star-icon.large {
+  right: 300px;
+  bottom: 270px;
+  width: 64px;
+  height: 64px;
+  fill: var(--secondary-blue);
+  transform: rotate(30deg);
+}
+
+.star-icon.mid {
+  right: -26px;
+  top: 32px;
+  width: 40px;
+  height: 40px;
+  fill: var(--primary-blue);
+}
+
+.star-icon.small {
+  right: 6px;
+  top: 270px;
+  width: 16px;
+  height: 16px;
+  fill: var(--secondary-brown-light);
+  transform: rotate(30deg);
+}
