@@ -9,10 +9,9 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 1.15;
-}
-
-.button:hover {
-  color: var(--primary-dark-blue);
-  background-color: transparent;
-  border: 2px solid var(--primary-blue);
+  &:hover {
+    color: var(--primary-dark-blue);
+    background-color: transparent;
+    border: 2px solid var(--primary-blue);
+  }
 }

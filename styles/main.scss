@@ -1,5 +1,7 @@
 @import './utils/fonts';
 @import './utils/variables';
+@import './utils/colors';
+@import './utils/text';
 
 @import './base';
 
@@ -7,9 +9,11 @@
 
 @import './components/buttons';
 @import './components/links';
+@import './components/inputs';
 
+@import './layouts/container';
 @import './layouts/header';
-
+@import './layouts/sections/section';
 @import './layouts/sections/hero-section';
 @import './layouts/sections/about-us-section';
 @import './layouts/sections/why-us-section';

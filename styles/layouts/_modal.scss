@@ -13,12 +13,6 @@
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
 .modal {
   position: relative;
   width: 100%;
@@ -31,26 +25,15 @@
   background-image: url('../images/footer-background.png');
   background-size: cover;
   overflow-y: auto;
-}
-
-.modal-btn-close {
-  position: absolute;
-  right: 42px;
-  top: 42px;
-  background-color: transparent;
-  padding: 8px;
-  outline: none;
-  border: 0;
-  cursor: pointer;
-}
-
-.modal-icon-close {
-  fill: var(--primary-white);
-}
-
-.modal-form-title {
-  color: var(--primary-white);
-  margin-bottom: 40px;
-  font-weight: 700;
-  font-size: 64px;
+  &__btn-close {
+    position: absolute;
+    right: 42px;
+    top: 42px;
+    background-color: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    fill: var(--primary-white);
+  }
 }

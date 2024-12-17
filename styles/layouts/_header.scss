@@ -6,29 +6,26 @@
   padding-top: 32px;
   backdrop-filter: blur(10px);
   background: #ffffff40;
-}
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 0;
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 32px 0;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 56px;
-  flex-grow: 1;
-  justify-content: center;
-}
-
-.nav-socials {
-  display: flex;
-  gap: 32px;
-}
-
-.nav-social-icon {
-  width: 32px;
-  height: 32px;
-  fill: var(--primary-dark-blue);
+    &__menu {
+      display: flex;
+      gap: 56px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+    &__socials {
+      display: flex;
+      gap: 32px;
+      &__icon {
+        width: 32px;
+        height: 32px;
+        fill: var(--primary-dark-blue);
+      }
+    }
+  }
 }

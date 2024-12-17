@@ -10,30 +10,8 @@
   border: 0;
 }
 
-.section-title {
-  color: var(--primary-dark-blue);
-  font-family: 'Play', sans-serif;
-  font-size: 64px;
-  line-height: 1.15;
-  margin-bottom: 48px;
-  text-align: center;
-}
-
-.brand-accent {
-  color: var(--primary-blue);
-}
-
-.container {
-  width: 100%;
-  max-width: 1288px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.container-compact {
-  padding: 0 90px;
-}
-
-.section {
-  padding: 48px 0;
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
