@@ -15,3 +15,7 @@
   visibility: hidden;
   pointer-events: none;
 }
+
+.is-scroll-disabled {
+  overflow: hidden;
+}

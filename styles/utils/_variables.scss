@@ -1,4 +1,6 @@
 :root {
+  /* COLORS */
+
   /* primary */
   --primary-white: #ffffff;
   --primary-blue: #2b7fff;
@@ -9,3 +11,8 @@
   --secondary-blue: #011f4a;
   --secondary-yellow: #ffd02b;
 }
+
+/* Breakpoints */
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;

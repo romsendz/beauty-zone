@@ -3,28 +3,49 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 32px;
-  backdrop-filter: blur(10px);
-  background: #ffffff40;
+  @media screen and (min-width: $bp-desktop) {
+    backdrop-filter: blur(10px);
+    background: #ffffff40;
+  }
   &__nav {
+    justify-content: space-between;
     display: flex;
     align-items: center;
     gap: 40px;
     padding: 32px 0;
-
     &__menu {
-      display: flex;
-      gap: 56px;
-      flex-grow: 1;
-      justify-content: center;
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: flex;
+        gap: 56px;
+        flex-grow: 1;
+        justify-content: center;
+      }
     }
     &__socials {
-      display: flex;
-      gap: 32px;
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: flex;
+        gap: 32px;
+      }
       &__icon {
         width: 32px;
         height: 32px;
         fill: var(--primary-dark-blue);
+      }
+    }
+    &__burger {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      @media screen and (min-width: $bp-desktop) {
+        display: none;
+      }
+      &__icon {
+        fill: var(--primary-white);
       }
     }
   }

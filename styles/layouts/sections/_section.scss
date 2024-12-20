@@ -1,12 +1,20 @@
 .section {
-  padding: 48px 0;
+  padding: 40px 0;
+  @media screen and (min-width: $bp-desktop) {
+    padding: 48px 0;
+  }
   &__section-title {
     color: var(--primary-dark-blue);
-    font-family: 'Play', sans-serif;
-    font-size: 64px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
     line-height: 1.15;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     text-align: center;
+    @media screen and (min-width: $bp-desktop) {
+      font-family: 'Play', sans-serif;
+      font-size: 64px;
+      margin-bottom: 48px;
+    }
     &--start {
       text-align: start;
     }

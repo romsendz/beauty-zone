@@ -1,0 +1,12 @@
+:root {
+  --swiper-pagination-color: var(--primary-blue);
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: var(--secondary-brown-light);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+  @media screen and (min-width: $bp-desktop) {
+    --swiper-pagination-bullet-horizontal-gap: 12px;
+  }
+}

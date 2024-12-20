@@ -1,29 +1,42 @@
 .about-us-section {
   &__container {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    flex-wrap: wrap;
     position: relative;
+    display: block;
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
   }
   &__content {
     margin-top: 40px;
     flex-basis: calc(calc(100% - 32px) - 40%);
   }
   &__text {
-    font-size: 22px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.15;
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 22px;
+      line-height: 1.7;
+    }
 
     &--first {
-      margin-bottom: 40px;
+      margin-bottom: 16px;
+      @media screen and (min-width: $bp-desktop) {
+        margin-bottom: 40px;
+      }
     }
   }
   &__images {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    flex-shrink: 0;
-    flex-basis: calc(calc(100% - 32px) - 60%);
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      flex-shrink: 0;
+      flex-basis: calc(calc(100% - 32px) - 60%);
+    }
 
     &__image {
       width: 320px;
@@ -36,30 +49,44 @@
   }
   &__star {
     position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -56px;
+    right: 3px;
     &--large {
-      right: 300px;
-      bottom: 270px;
-      width: 64px;
-      height: 64px;
-      fill: var(--secondary-blue);
-      transform: rotate(30deg);
+      @media screen and (min-width: $bp-desktop) {
+        width: 64px;
+        height: 64px;
+        right: 300px;
+        bottom: 270px;
+        fill: var(--secondary-blue);
+        transform: rotate(30deg);
+      }
     }
 
     &--mid {
-      right: -26px;
-      top: 32px;
-      width: 40px;
-      height: 40px;
-      fill: var(--primary-blue);
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+        right: -26px;
+        top: 32px;
+        width: 40px;
+        height: 40px;
+        fill: var(--primary-blue);
+      }
     }
 
     &--small {
-      right: 6px;
-      top: 270px;
-      width: 16px;
-      height: 16px;
-      fill: var(--secondary-brown-light);
-      transform: rotate(30deg);
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+        right: 6px;
+        top: 270px;
+        width: 16px;
+        height: 16px;
+        fill: var(--secondary-brown-light);
+        transform: rotate(30deg);
+      }
     }
   }
 }

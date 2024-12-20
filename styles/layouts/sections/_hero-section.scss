@@ -15,24 +15,63 @@
   }
 
   &__container {
-    margin-left: 106px;
+    @media screen and (min-width: $bp-desktop) {
+      margin-left: 106px;
+    }
   }
 
   &__intro {
     margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    @media screen and (min-width: $bp-desktop) {
+      text-align: start;
+      font-size: 18px;
+      line-height: 1.2;
+    }
   }
 
   &__title {
-    font-size: 140px;
-    margin-bottom: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 32px;
+    @media screen and (min-width: $bp-desktop) {
+      text-align: start;
+      font-size: 140px;
+      margin-bottom: 40px;
+    }
+    &__break {
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+      }
+    }
   }
 
   &__button {
     &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       max-width: 35%;
+      margin: 0 auto;
+      @media screen and (min-width: $bp-desktop) {
+        margin: 0;
+        align-items: flex-start;
+      }
     }
     &__text {
-      margin-top: 14px;
+      color: var(--secondary-brown);
+      text-align: center;
+      @media screen and (min-width: $bp-desktop) {
+        margin-top: 14px;
+        text-align: start;
+      }
     }
   }
 }

@@ -1,21 +1,36 @@
 .contact-section {
-  padding-bottom: 96px;
+  padding-bottom: 0;
+  @media screen and (min-width: $bp-desktop) {
+    padding-bottom: 96px;
+  }
+
   &__wrapper {
     display: flex;
-    gap: 32px;
     justify-content: center;
+    flex-direction: column-reverse;
+    gap: 24px;
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
   &__map {
-    border-radius: 32px;
     border: 0;
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
+    @media screen and (min-width: $bp-desktop) {
+      border-radius: 32px;
+    }
   }
   &__form-container {
-    padding: 48px 56px;
-    border-radius: 32px;
+    margin: 0 20px;
+    padding: 42px 24px;
     background-color: var(--primary-dark-blue);
     background-image: url('../images/footer-background.png');
     background-size: cover;
+    border-radius: 32px;
+    @media screen and (min-width: $bp-desktop) {
+      padding: 48px 56px;
+    }
   }
 }
